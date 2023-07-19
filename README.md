@@ -4,8 +4,6 @@
 >
 >fatal: Authentication failed for 'https://github.com/rosmontisu/WorkplaceEnvGit.git/'
 
-21년 8월부터 token으로 로그인해야한다.   
-
 Developer setting -> personal access tokens   
 repo -> generate token   
 
