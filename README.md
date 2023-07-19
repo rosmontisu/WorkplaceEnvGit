@@ -1,3 +1,8 @@
+git pull origin - merge o
+git fetch origin - merge x
+
+
+
 >remote: Support for password authentication was removed on August 13, 2021.
 >
 >remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote->repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
