@@ -1,4 +1,4 @@
-git pull origin - merge o
+git pull origin - merge o   
 git fetch origin - merge x
 
 
