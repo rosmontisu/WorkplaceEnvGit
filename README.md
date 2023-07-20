@@ -12,8 +12,7 @@ git fetch origin - merge x
 Developer setting -> personal access tokens   
 repo -> generate token   
 
-이후로는 평소대로 git config   
-단, password 대신 token 입력
+이후로는 평소대로 git config 해두면 되는데 password 대신 token 사용
 
 ```
 git config --global user.name 'rosmontisu'     
