@@ -16,6 +16,8 @@ else:
 def click(x,y):
     # https://adbinstaller.com/commands/adb-shell-input-tap-5b67dc5ee7958178a295553f
     cmd = "input touchscreen tap " + str(x) + " " + str(y)
+    # adb shell input tap <x> <y>
+    
     adbdevice.shell(cmd)
 
 def screenCapture():
