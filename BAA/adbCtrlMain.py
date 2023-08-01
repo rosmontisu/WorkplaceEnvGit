@@ -60,6 +60,10 @@ def screenCapture(): # screen capture and pull my test dir
     adbdevice.shell(cmd)
     print("정상작동")
 
+def imageCenterClick(findImageName):
+    center = pyautogui.locateCenterOnScreen(findImageName)  # 이미지 영역 중심 좌표 찾기
+    pyautogui.click(center) 
+
 def background_screenshot(hwnd, width, height): # 배경 스크린 찍는 함수
     # 창의 핸들, 스크린샷의 너비 및 높이
     wDC = win32gui.GetWindowDC(hwnd)    # 창의 장치 컨덱트(DC)
@@ -96,22 +100,30 @@ def background_screenshot(hwnd, width, height): # 배경 스크린 찍는 함수
     win32gui.DeleteObject(dataBitMap.GetHandle())
     return im
    
-bluestackhw = win32gui.FindWindow(None, "MuMu Player")
+mumuhwnd = win32gui.FindWindow(None, "설정 - MuMu Player")
+# 이때 핸들은 32비트 정수값이다.
+print(mumuhwnd)
+
 findImage = "searchImage1.png"
 
 해상도오차보정 = 0 #32
-scr_img = background_screenshot(bluestackhw, 1920, 1080 + 해상도오차보정)
+scr_img = background_screenshot(mumuhwnd, 1920, 1080 + 해상도오차보정)
 scr_img.show()  # 스크린샷 이미지 확인(디버그용)
+#findImage.show()
+
 
 clickhere = pyautogui.locate(findImage, scr_img, confidence=0.99) 
 # confidence = 0 일때 완전 일치
 # scr_image 에서 findImage를 허용오차 80%로 서치한다.
 print("좌표")
 print(clickhere)
-click(clickhere)
+pyautogui.click(clickhere)
+
+imageCenterClick(findImage)
         
 
 #randomClick(100,100, 10, 10)
 #screenCapture()
 
+# 댓다 
 
