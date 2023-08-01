@@ -18,3 +18,6 @@ repo -> generate token
 git config --global user.name 'rosmontisu'     
 git config --global user.password 'my-token'
 ```
+
+https://mkblog.co.kr/android-adb-input-command/
+adb shell input 커맨드 참조한 곳
