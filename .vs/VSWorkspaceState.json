@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BaaMain",
+    "\\BaaMain\\FindImages",
+    "\\BaaMain\\ScreenImages",
+    "\\BaaMain\\__pycache__"
   ],
+  "SelectedNode": "\\BaaMain\\baaMain.py",
   "PreviewInSolutionExplorer": false
 }
