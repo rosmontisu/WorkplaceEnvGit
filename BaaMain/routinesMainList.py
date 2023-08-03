@@ -7,41 +7,52 @@ import win32gui
 import pyautogui
 
 # main에서 path와 device 가져와둠
-from mainSystem import pathFindImage, pathScreenImage, deviceInfo
+from mainSystem import pathImg, pathScreen, deviceInfo
 
-# 메뉴화면
-menuList = ["Cafe", "Schedule", "Student",      # 카페, 스케쥴, 학생
-            "Formation", "Club", "Crafting",    # 편성, 서클, 제조
-            "Shop", "Recruit", "Campaign",      # 상점, 모집, 업무
-            "Tasks", "Ap", "Mail"]              # 미션, ap, 우편함
-              
-
-
-# 범용UI
-universalList = ["Back", "Home",                # 뒤로가기, 홈
-                 "ExitUseX", "ExitUseNotX", "okButton",     # x, 빈공간 클릭
-                 "ZoomOut", "ZoomIn",           # 줌아웃, 줌인
-                 "WheelDown", "WheelUp"]        # 휠다운, 휠업
-   
-# 카페 
-cafeList = ["Gifts", "Invitation", "CafeEarnings", ] # 선물, 초대, 수익
-
-# 스케쥴
-Facility = [1, 2, 3, 4, 5, 6, 7, 8] # 나중에 시설 이름으로 변경
-scheduleList = ["LeftArrow", "RightArrow", Facility]
-
+menuImgPath = {
+    "Cafe": pathImg + "cafe.png", # 카페
+    "Invitation": pathImg + "invitation.png", # 초대
+    "ZoomOut": pathImg + "zoom_out.png", # 줌 아웃
+    "Gifts": pathImg + "gifts.png", # 선물
+    "CafeEarnings": pathImg + "cafe_earnings.png", # 카페 수익
+    "Receive": pathImg + "receive.png", # 수령
+    "Home": pathImg + "home.png", # 홈
+    "Schedule": pathImg + "schedule.png", # 스케쥴
+    "RightArrow": pathImg + "right_arrow.png", # 오른쪽 화살표
+}
+universalImgPath = {
+    "Back": pathImg + "back.png", # 뒤로 가기
+    "Home": pathImg + "home.png", # 홈
+    "ExitUseX": pathImg + "exit_use_x.png", # x
+    "ExitUseNotX": pathImg + "exit_use_not_x.png", # 빈 공간 클릭
+    "okButton": pathImg + "ok_button.png", # 확인 버튼
+    "ZoomOut": pathImg + "zoom_out.png", # 줌 아웃
+    "ZoomIn": pathImg + "zoom_in.png", # 줌 인
+    "WheelDown": pathImg + "wheel_down.png", # 휠 다운
+    "WheelUp": pathImg + "wheel_up.png", # 휠 업
+}
+cafeImgPath = {
+    "Gifts": pathImg + "gifts.png", # 선물
+    "Invitation": pathImg + "invitation.png", # 초대
+    "CafeEarnings": pathImg + "cafe_earnings.png", # 카페 수익
+}
+scheduleImgPath = {
+    "LeftArrow": pathImg + "left_arrow.png", # 왼쪽 화살표
+    "RightArrow": pathImg + "right_arrow.png", # 오른쪽 화살표
+    "Facility": pathImg + "facility.png", # 시설
+}
 
 # 메뉴 이름 찾아서 클릭
-def menuButton(menuName):
-    imgName = pathFindImage + menuName + ".png" 
-    imgCooldinateArr = adbFun.findImageCooldinate(pathFindImage, pathScreenImage, menuName)
-    print(menuName + ".png" + " 이미지를 탐색합니다.")
-    adbFun.clickXY(deviceInfo, imgCooldinateArr[0], imgCooldinateArr[1])
+def menuButton(imgName):
+    imgName = pathImg + imgName + ".png" 
+    coordinates = adbFun.findCoordinate(pathImg, pathScreen, imgName)
+    print(imgName + ".png" + " 이미지를 탐색합니다.")
+    adbFun.clickXY(deviceInfo, coordinates[0], coordinates[1])
 
-def favorabilityIncreaseFunction():
+def favorabilityIncrease():
     print()
 
-def scheduleRecurrenceFunction():
+def scheduleRecurrence():
     print()
 
 # 1. 카페
@@ -51,7 +62,7 @@ def cafeRoutine():
     menuButton("") # 초대
     menuButton("ZoomOut")
     menuButton("Gifts")
-    favorabilityIncreaseFunction() # 학생 6명 호감 상승
+    favorabilityIncrease() # 학생 6명 호감 상승
     menuButton("CafeEarnings")
     menuButton("") # 수령
     menuButton("") # 수령창 나가기
@@ -61,12 +72,12 @@ def cafeRoutine():
 # 2. 스케쥴
 def scheduleRoutine():
     menuButton("Schedule")
-    scheduleRecurrenceFunction() # 스케쥴 반복 함수
+    scheduleRecurrence() # 스케쥴 반복 함수
     menuButton("RightArrow")
     menuButton("RightArrow")
-    scheduleRecurrenceFunction() # 스케쥴 반복 함수
+    scheduleRecurrence() # 스케쥴 반복 함수
     menuButton("RightArrow")
-    scheduleRecurrenceFunction() # 스케쥴 반복 함수
+    scheduleRecurrence() # 스케쥴 반복 함수
     menuButton("Home")
 
 # 3. 학생

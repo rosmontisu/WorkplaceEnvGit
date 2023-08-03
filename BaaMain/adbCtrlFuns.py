@@ -14,8 +14,6 @@ import win32con
 
 from PIL import Image
 
-
-
 def clickXY(adbdevice, x, y): # (x, y)좌표 클릭
 
     cmd = "input touchscreen tap " + str(x) + " " + str(y)
@@ -27,7 +25,6 @@ def clickRandomXY(adbdevice, x, y, dx, dy):  # 지정 범위(dx, dy)안에서의
     xx = random.randint(x, x + dx)  # randint(a, b) - a이상 b이하 랜덤 정수 생성
     yy = random.randint(newy, newy + dy)    
     cmd = "input touchscreen tap " + str(xx) + " " + str(yy)
-
     adbdevice.shell(cmd)
 
 def clickDelayXY(adbdevice, cor):    # 일정 시간 클릭을 유지(input swipe 커맨드 이기에 드래그와 동일한 원리)
@@ -48,28 +45,32 @@ def clickDelayXY(adbdevice, cor):    # 일정 시간 클릭을 유지(input swip
 def captureAppScreen(adbdevice):
     cmd = "screencap -d 0 /sdcard/nowScreen.png"
     adbdevice.shell(cmd)
-    print("정상작동")
+    print("스크린 캡쳐 정상 작동")
+    
+def findCoordinate(pathImg, pathScreen, imgName):
+    img = pathImg + imgName + ".png"
+    screen = pathScreen + "nowScreen.png"
+    coordinates = pyautogui.locate(img, screen, confidence=0.9)
 
-
-def findImageCooldinate(pathFindImage, pathScreenImage, imgWantToFind):
-    img = pathFindImage + imgWantToFind + ".png" 
-    screen = pathScreenImage + "nowScreen.png"   
-    clickhere = pyautogui.locate(img, screen, confidence=0.9) # 이미지 서치
-    if clickhere is not None:
-        print("좌표 : " + str(clickhere))
-        imgCooldinateArr = re.findall(r'\d+', str(clickhere)) # 문자열에서 숫자만 추출
-
-        # 서치한 이미지 센터 입력을 위한 좌표 보정
-        # 나중에 수정하죠..
-        x = int(imgCooldinateArr[0]) + ((int(imgCooldinateArr[2])-int(imgCooldinateArr[0]))/2)
-        y = int(imgCooldinateArr[3])/2 + int(imgCooldinateArr[1])
-        imgCooldinateArr[0] = x
-        imgCooldinateArr[1] = y
-        print(str(imgCooldinateArr[0]) + " " + str(imgCooldinateArr[1])) # x, y 좌표 추출
-        return imgCooldinateArr
+    if coordinates is not None:
+        print("Coordinates: " + str(coordinates))
+        coordinates = tuple(int(c) for c in re.findall(r"\d+", str(coordinates)))
+        x = coordinates[0] + ((coordinates[2] - coordinates[0]) / 2)
+        y = coordinates[3] / 2 + coordinates[1]
+        coordinates = (x, y)
+        print(imgName + "의 좌표 ({}, {}) 탐색 성공".format(str(coordinates[0]), str(coordinates[1])))
+        return coordinates
     else:
         print("이미지 탐색에 실패했습니다.")
         return None
+
+def get_x_coordinate(coordinates):
+    return coordinates[0]
+
+def get_y_coordinate(coordinates):
+    return coordinates[1]
+    
+    
     
  
 
