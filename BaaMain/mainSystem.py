@@ -31,7 +31,7 @@ os.system(cmdCommand)
 
 # 이미지 탐색 후 좌표 추출
 # 이미지경로1, 이미지경로2, 찾을이미지, 현재스크린
-imageNum = adbFun.findImageNumber(pathFindImage, pathScreenImage, 1)
+imageNum = adbFun.findImageCooldinate(pathFindImage, pathScreenImage, 1)
 
 # 이미지 좌표 클릭
 adbFun.clickXY(deviceInfo, imageNum[0], imageNum[1])

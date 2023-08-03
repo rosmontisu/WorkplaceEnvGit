@@ -51,36 +51,25 @@ def captureAppScreen(adbdevice):
     print("정상작동")
 
 
-def findImageNumber(pathFindImage, pathScreenImage, imgWantToFind):
-    menuList = ["Cafe", "Lesson", "Student",        # 카페, 스케쥴, 학생
-                "Formation", "Club", "Crafting",    # 편성, 서클, 제조
-                "Shop", "Recruit", "Campaign",      # 상점, 모집, 업무
-                "Tasks", "Ap", "Mail"               # 미션, ap, 우편함
-                ]      
-    cafeList = ["Gifts", "CafeEarnings", ]
-    if imgWantToFind in menuList:
-      img = menuList[imgWantToFind - 1]     # 찾는 이미지 고정
-      print(menuList[imgWantToFind - 1])  
-    else:
-      print("잘못된 입력입니다.")
-
-    #img = pathFindImage + "cafe.png" 
+def findImageCooldinate(pathFindImage, pathScreenImage, imgWantToFind):
+    img = pathFindImage + imgWantToFind + ".png" 
     screen = pathScreenImage + "nowScreen.png"   
     clickhere = pyautogui.locate(img, screen, confidence=0.9) # 이미지 서치
     if clickhere is not None:
         print("좌표 : " + str(clickhere))
-        imageNum = re.findall(r'\d+', str(clickhere)) # 문자열에서 숫자만 추출
+        imgCooldinateArr = re.findall(r'\d+', str(clickhere)) # 문자열에서 숫자만 추출
 
         # 서치한 이미지 센터 입력을 위한 좌표 보정
         # 나중에 수정하죠..
-        x = int(imageNum[0]) + ((int(imageNum[2])-int(imageNum[0]))/2)
-        y = int(imageNum[3])/2 + int(imageNum[1])
-        imageNum[0] = x
-        imageNum[1] = y
-        print(str(imageNum[0]) + " " + str(imageNum[1])) # x, y 좌표 추출
-        return imageNum
+        x = int(imgCooldinateArr[0]) + ((int(imgCooldinateArr[2])-int(imgCooldinateArr[0]))/2)
+        y = int(imgCooldinateArr[3])/2 + int(imgCooldinateArr[1])
+        imgCooldinateArr[0] = x
+        imgCooldinateArr[1] = y
+        print(str(imgCooldinateArr[0]) + " " + str(imgCooldinateArr[1])) # x, y 좌표 추출
+        return imgCooldinateArr
     else:
         print("이미지 탐색에 실패했습니다.")
+        return None
     
  
 
