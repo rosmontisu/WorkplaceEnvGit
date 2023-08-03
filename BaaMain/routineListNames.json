@@ -1,0 +1,19 @@
+# 메뉴화면
+menuList = ["Cafe", "Schedule", "Student",        # 카페, 스케쥴, 학생
+            "Formation", "Club", "Crafting",    # 편성, 서클, 제조
+            "Shop", "Recruit", "Campaign",      # 상점, 모집, 업무
+            "Tasks", "Ap", "Mail"               # 미션, ap, 우편함
+            ]   
+
+
+# 범용UI
+universalList = ["Back", "Home",                # 뒤로가기, 홈
+                 "ExitUseX", "ExitUseNotX",     # x, 빈공간 클릭
+                 "ZoomOut", "ZoomIn"]           # 줌아웃, 줌인
+   
+# 카페 
+cafeList = ["Gifts", "Invitation", "CafeEarnings", ] # 선물, 초대, 수익
+
+# 스케쥴
+Facility = [1, 2, 3, 4, 5, 6, 7, 8] # 나중에 시설 이름으로 변경
+scheduleList = ["LeftArrow", "RightArrow", Facility]
