@@ -47,19 +47,19 @@ def captureAppScreen(adbdevice):
     adbdevice.shell(cmd)
     print("스크린 캡쳐 정상 작동")
     
-def findCoordinate(pathImg, pathScreen, imgName):
-    img = pathImg + imgName + ".png"
+def findCoordinate(pathImg, pathScreen, nameImg):
+    img = pathImg + nameImg + ".png"
     screen = pathScreen + "nowScreen.png"
-    coordinates = pyautogui.locate(img, screen, confidence=0.9)
+    cor = pyautogui.locate(img, screen, confidence=0.9) # find image coordinate
 
-    if coordinates is not None:
-        print("Coordinates: " + str(coordinates))
-        coordinates = tuple(int(c) for c in re.findall(r"\d+", str(coordinates)))
-        x = coordinates[0] + ((coordinates[2] - coordinates[0]) / 2)
-        y = coordinates[3] / 2 + coordinates[1]
-        coordinates = (x, y)
-        print(imgName + "의 좌표 ({}, {}) 탐색 성공".format(str(coordinates[0]), str(coordinates[1])))
-        return coordinates
+    if cor is not None:
+        print("Coordinates: " + str(cor))
+        cor = tuple(int(c) for c in re.findall(r"\d+", str(cor)))
+        x = cor[0] + ((cor[2] - cor[0]) / 2)
+        y = cor[3] / 2 + cor[1]
+        cor = (x, y)
+        print(nameImg + "의 좌표 ({}, {}) 탐색 성공".format(str(cor[0]), str(cor[1])))
+        return cor
     else:
         print("이미지 탐색에 실패했습니다.")
         return None

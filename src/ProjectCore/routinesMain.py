@@ -2,7 +2,7 @@ from asyncio.windows_events import NULL
 from tkinter import Menubutton
 from ppadb.client import Client as AdbClient
 import os # 터미널 접근용
-import adbCtrlFuns as adbFun    # adb 관련 함수 모음
+import managerAdb as adbFun    # adb 관련 함수 모음
 import win32gui
 import pyautogui
 
