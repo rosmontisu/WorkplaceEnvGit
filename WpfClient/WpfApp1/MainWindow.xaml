@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        
+        <StackPanel Orientation="Vertical" Margin="10,20,550,100">
+            <TextBox Text="SomeText" Width="220" Margin="10" 
+                     HorizontalAlignment="Center" Background="Gray"></TextBox>
+            <CheckBox Content="카페" HorizontalAlignment="Left " Background="LightBlue" VerticalAlignment="Top"/>
+            <CheckBox Content="일정" HorizontalAlignment="Left " Background="LightBlue" VerticalAlignment="Top"/>
+            <CheckBox Content="학생" HorizontalAlignment="Left " Background="LightBlue" VerticalAlignment="Top"/>
+            <CheckBox Content="편성" HorizontalAlignment="Left " Background="LightBlue" VerticalAlignment="Top"/>
+            <CheckBox Content="서클" HorizontalAlignment="Left " Background="LightBlue" VerticalAlignment="Top"/>
+            <CheckBox Content="제조" HorizontalAlignment="Left " Background="LightBlue" VerticalAlignment="Top"/>
+            <CheckBox Content="상점" HorizontalAlignment="Left " Background="LightBlue" VerticalAlignment="Top"/>
+            <CheckBox Content="업무" HorizontalAlignment="Left " Background="LightBlue" VerticalAlignment="Top"/>
+            <CheckBox Content="임무" HorizontalAlignment="Left " Background="LightBlue" VerticalAlignment="Top"/>
+            <Button Content="실행" Width="100" Height="30" Margin="40"
+                    HorizontalAlignment="Center"  VerticalAlignment="Top" Click="Button_Click"/>
+        </StackPanel>
+
+
+
+
+
+    </Grid>
+</Window>
