@@ -1,37 +1,37 @@
 {
     "system": {
-        "firstOpen": ""
+        "firstOpen": "./resource/BlueArchive-UI-Img/"
     },
     "menuImgPath": {
-        "Cafe": "cafe.png",
-        "Invitation": "invitation.png",
-        "ZoomOut": "zoom_out.png",
-        "Gifts": "gifts.png",
-        "CafeEarnings": "cafe_earnings.png",
-        "Receive": "receive.png",
-        "Home": "home.png",
-        "Schedule": "schedule.png",
-        "RightArrow": "right_arrow.png"
+        "Cafe": "./resource/BlueArchive-UI-Img/cafe.png",
+        "Invitation": "./resource/BlueArchive-UI-Img/invitation.png",
+        "ZoomOut": "./resource/BlueArchive-UI-Img/zoom_out.png",
+        "Gifts": "./resource/BlueArchive-UI-Img/gifts.png",
+        "CafeEarnings": "./resource/BlueArchive-UI-Img/cafe_earnings.png",
+        "Receive": "./resource/BlueArchive-UI-Img/receive.png",
+        "Home": "./resource/BlueArchive-UI-Img/home.png",
+        "Schedule": "./resource/BlueArchive-UI-Img/schedule.png",
+        "RightArrow": "./resource/BlueArchive-UI-Img/right_arrow.png"
     },
     "universalImgPath": {
-        "Back": "back.png",
-        "Home": "home.png",
-        "ExitUseX": "exit_use_x.png",
-        "ExitUseNotX": "exit_use_not_x.png",
-        "okButton": "ok_button.png",
-        "ZoomOut": "zoom_out.png",
-        "ZoomIn": "zoom_in.png",
-        "WheelDown": "wheel_down.png",
-        "WheelUp": "wheel_up.png"
+        "Back": "./resource/BlueArchive-UI-Img/back.png",
+        "Home": "./resource/BlueArchive-UI-Img/home.png",
+        "ExitUseX": "./resource/BlueArchive-UI-Img/exit_use_x.png",
+        "ExitUseNotX": "./resource/BlueArchive-UI-Img/exit_use_not_x.png",
+        "okButton": "./resource/BlueArchive-UI-Img/ok_button.png",
+        "ZoomOut": "./resource/BlueArchive-UI-Img/zoom_out.png",
+        "ZoomIn": "./resource/BlueArchive-UI-Img/zoom_in.png",
+        "WheelDown": "./resource/BlueArchive-UI-Img/wheel_down.png",
+        "WheelUp": "./resource/BlueArchive-UI-Img/wheel_up.png"
     },
     "cafeImgPath": {
-        "Gifts": "gifts.png",
-        "Invitation": "invitation.png",
-        "CafeEarnings": "cafe_earnings.png"
+        "Gifts": "./resource/BlueArchive-UI-Img/gifts.png",
+        "Invitation": "./resource/BlueArchive-UI-Img/invitation.png",
+        "CafeEarnings": "./resource/BlueArchive-UI-Img/cafe_earnings.png"
     },
     "scheduleImgPath": {
-        "LeftArrow": "left_arrow.png",
-        "RightArrow": "right_arrow.png",
-        "Facility": "facility.png"
+        "LeftArrow": "./resource/BlueArchive-UI-Img/left_arrow.png",
+        "RightArrow": "./resource/BlueArchive-UI-Img/right_arrow.png",
+        "Facility": "./resource/BlueArchive-UI-Img/facility.png"
     }
 }

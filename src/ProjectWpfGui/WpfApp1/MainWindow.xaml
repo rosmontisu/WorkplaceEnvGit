@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         
-        <StackPanel Orientation="Vertical" Margin="10,20,550,100">
+        <StackPanel Orientation="Vertical" Margin=     "10,20,550,100">
             <TextBox Text="SomeText" Width="220" Margin="10" 
                      HorizontalAlignment="Center" Background="Gray"></TextBox>
             <CheckBox Content="카페" HorizontalAlignment="Left " Background="LightBlue" VerticalAlignment="Top"/>
