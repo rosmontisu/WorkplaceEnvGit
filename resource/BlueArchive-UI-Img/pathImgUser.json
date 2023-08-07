@@ -11,14 +11,17 @@
         "Receive": "receive.png",
         "Home": "home.png",
         "Schedule": "schedule.png",
-        "RightArrow": "right_arrow.png"
+        "RightArrow": "right_arrow.png",
+        "Shop": "shop.png"
     },
     "universalImgPath": {
         "Back": "back.png",
         "Home": "home.png",
         "ExitUseX": "exit_use_x.png",
-        "ExitUseNotX": "exit_use_not_x.png",
-        "okButton": "ok_button.png",
+        "ExitUseNotX": "그런건 없어요!",
+        "OkButton": "ok_button.png",
+        "receiveButton" : "receive_button.png",
+
         "ZoomOut": "zoom_out.png",
         "ZoomIn": "zoom_in.png",
         "WheelDown": "wheel_down.png",
@@ -26,7 +29,7 @@
     },
     "cafeImgPath": {
         "Gifts": "gifts.png",
-        "Invitation": "invitation.png",
+        "InvitationTicket": "invitation_ticket.png",
         "CafeEarnings": "cafe_earnings.png"
     },
     "scheduleImgPath": {

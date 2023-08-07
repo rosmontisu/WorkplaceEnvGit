@@ -25,6 +25,7 @@ def scheduleRecurrence():
 # 1. 카페
 def cafeRoutine():
     menuButton("Cafe")
+    menuButton("OkButton")
     menuButton("Invitation")
     menuButton("") # 초대
     menuButton("ZoomOut")

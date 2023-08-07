@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BaaMain",
-    "\\BaaMain\\FindImages",
-    "\\BaaMain\\ScreenImages",
-    "\\BaaMain\\__pycache__"
+    "\\src",
+    "\\src\\ProjectCore",
+    "\\_testDir"
   ],
-  "SelectedNode": "\\BaaMain\\baaMain.py",
+  "SelectedNode": "\\src\\ProjectCore\\managerAdb.py",
   "PreviewInSolutionExplorer": false
 }
