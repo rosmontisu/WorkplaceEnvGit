@@ -23,30 +23,38 @@ https://mkblog.co.kr/android-adb-input-command/
 adb shell input 커맨드 참조한 곳
 
 
-현재 코드 작동 방식
+## 현재 코드 작동 방식
 1. adb client device의 정보를 가진 객체 adbdevice 생성
 2. 현재 에뮬레이터의 스크린을 캡쳐
-3. 서치 이미지를 스크린 이미지에서 탐색
-4. 서치 이미지의 위치 좌표를 추출
-5. 좌표 클릭
+   - adb shell screencap 방식
+   - win32api 로 핸들 가져오는 방식(후킹)
+4. cv/ocr로 스크린에서 탐색 후 좌표 추출
+5. 해당 좌표로 adb를 통해 입력(클릭)
+   - adb touch - o
+   - android miniTouch - test
+   - h/w input - consider 
+   - pyautogui - consider 
 
-카페에서 애들 어떻게 찾을거임?   
-- 선물 선택 전과 후 이미지를 비교한다.
-- 선물 선택 상태에서 채도를 극단적으로 조정하여 하얀색 말풍선의 좌표를 찾는다
+
+## 구현 아이디어
+1. 카페에서 애들 어떻게 찾을거임?   
+   - 선물 선택 상태에서 말풍선 찾기
+   - 처음 입장시 뜨는 방문 학생 목록으로 sd대조해서 찾기
+   - 처음에 뜨는 특유의 연출로 좌표 서치
 정도 생각하는중
 
-gui환경은 뭐로?
-- c#공부할겸 wpf로 할까 생각중
-- 일렉트론 등의 웹 환경도 끌리긴 하지만 adb건드는 프로그램이라 웹에서는 구현을 못하니까
-  
-게임 스케쥴이랑 데이터 수집하는 서버는?
-- 고민중..
+2. 업무 태우는건 뭐로?
+   - 진행중인 이벤트랑 동기화 시켜서 ap를 태우는 방식으로 생각중
+   - 스케쥴 관련 api 있으면 그걸로 긁어와서 루틴 수정하는 방식
+   - 없으면..
 
-사용한 주요 라이브러리 정리
-- ppadb
-- win32api
-- numpy
-- matplotlib
-- pyautogui
-- paddleOcr, easyOcr
-- openCv
+3. gui환경은 뭐로?
+   - window client - C# wpf
+   - web - electron
+
+4. 라이브러리
+   - ppadb
+   - openCV
+   - pyautogui
+   - PPOCR, easyOcr
+
