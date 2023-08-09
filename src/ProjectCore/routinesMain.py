@@ -27,7 +27,7 @@ def cafeRoutine():
     menuButton("Cafe")
     menuButton("OkButton")
     menuButton("Invitation")
-    menuButton("") # 초대
+    menuButton("Invite") # 초대
     menuButton("ZoomOut")
     menuButton("Gifts")
     favorabilityIncrease() # 5~6명 클릭
