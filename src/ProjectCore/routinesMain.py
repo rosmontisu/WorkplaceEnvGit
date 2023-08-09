@@ -30,7 +30,7 @@ def cafeRoutine():
     menuButton("") # 초대
     menuButton("ZoomOut")
     menuButton("Gifts")
-    favorabilityIncrease() # 학생 6명 호감 상승
+    favorabilityIncrease() # 5~6명 클릭
     menuButton("CafeEarnings")
     menuButton("") # 수령
     menuButton("") # 수령창 나가기

@@ -46,7 +46,7 @@ def captureAppScreen(adbdevice):
     cmd = "screencap -d 0 /sdcard/nowScreen.png"
     adbdevice.shell(cmd)
     print("스크린 캡쳐 정상 작동")
-    
+        
 def findCoordinate(pathImg, pathScreen, nameImg):
     img = pathImg + nameImg + ".png"
     screen = pathScreen + "nowScreen.png"
