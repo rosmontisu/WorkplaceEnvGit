@@ -1,4 +1,4 @@
-# 개인용 메모장   
+# 메모장   
 git pull origin - merge o   
 git fetch origin - merge x
 
