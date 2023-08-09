@@ -3,35 +3,41 @@
         "firstOpen": ""
     },
     "menuImgPath": {
-        "Cafe": "cafe.png",
-        "Invitation": "invitation.png",
-        "ZoomOut": "zoom_out.png",
-        "Gifts": "gifts.png",
-        "CafeEarnings": "cafe_earnings.png",
-        "Receive": "receive.png",
-        "Home": "home.png",
-        "Schedule": "schedule.png",
-        "RightArrow": "right_arrow.png"
+        "Cafe": "Menu/cafe.png",
+        "Schedule": "Menu/schedule.png",
+        "Student" : "Menu/student.png",
+        "Formation" : "Mune/formation.png",
+        "Clan" : "Menu/clan.png",
+        "Crafting" : "Mune/craftring.png",
+        "Shop": "Menu/shop.png",
+        "Invitation": "Menu/invitation.png",
+
+        "Home": "Menu/home.png"
     },
     "universalImgPath": {
-        "Back": "back.png",
-        "Home": "home.png",
-        "ExitUseX": "exit_use_x.png",
-        "ExitUseNotX": "exit_use_not_x.png",
-        "okButton": "ok_button.png",
-        "ZoomOut": "zoom_out.png",
-        "ZoomIn": "zoom_in.png",
-        "WheelDown": "wheel_down.png",
-        "WheelUp": "wheel_up.png"
+        "Back": "Universal/back.png",
+        "Home": "Universal/home.png",
+        "ExitUseX": "Universal/exit_use_x.png",
+        "ExitUseNotX": 0,
+        "OkButton": "Universal/ok_button.png",
+        "receiveButton" : "Universal/receive_button.png",
+        
+        "ZoomOut": "Universal/zoom_out.png",
+        "ZoomIn": "Universal/zoom_in.png",
+        "WheelDown": "Universal/wheel_down.png",
+        "WheelUp": "Universal/wheel_up.png"
     },
     "cafeImgPath": {
-        "Gifts": "gifts.png",
-        "Invitation": "invitation.png",
-        "CafeEarnings": "cafe_earnings.png"
+        "Gifts": "Cafe/gifts.png",
+        "InvitationTicket": "Cafe/invitation_ticket.png",
+        "CafeEarnings": "Cafe/cafe_earnings.png",
+        "Favorability": "Cafe/favorability.png",
+        "InterestMe" : "Cafe/interest_me.png",
+        "Thanks" : "Cafe/thanks.png"
     },
     "scheduleImgPath": {
-        "LeftArrow": "left_arrow.png",
-        "RightArrow": "right_arrow.png",
-        "Facility": "facility.png"
+        "LeftArrow": "Schedule/left_arrow.png",
+        "RightArrow": "Schedule/right_arrow.png",
+        "Facility": "Schedule/facility.png"
     }
 }

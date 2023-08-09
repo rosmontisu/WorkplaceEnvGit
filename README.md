@@ -1,7 +1,6 @@
+## 메모장   
 git pull origin - merge o   
 git fetch origin - merge x
-
-
 
 >remote: Support for password authentication was removed on August 13, 2021.
 >
