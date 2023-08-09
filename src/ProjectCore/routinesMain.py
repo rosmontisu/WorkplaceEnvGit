@@ -16,7 +16,8 @@ def menuButton(imgName):
     print(imgName + ".png" + " 이미지를 탐색합니다.")
     adbFun.clickXY(deviceInfo, coordinates[0], coordinates[1])
 
-def favorabilityIncrease():
+
+def favorabilityIncrease(): # 선물클릭, 위로 드래그, 캐릭터 찾아서 선택까지
     print()
 
 def scheduleRecurrence():
@@ -24,29 +25,38 @@ def scheduleRecurrence():
 
 # 1. 카페
 def cafeRoutine():
+    # 카페-초대권-정렬-초대-확인
     menuButton("Cafe")
     menuButton("OkButton")
-    menuButton("Invitation")
-    menuButton("Invite") # 초대
-    menuButton("ZoomOut")
-    menuButton("Gifts")
-    favorabilityIncrease() # 5~6명 클릭
+    menuButton("Invitation") 
+    menuButton("Arrange") 
+    menuButton("Invite") 
+    menuButton("OkButton") 
+    # delay 7s
+    # 수익수령-수령-허공터치
     menuButton("CafeEarnings")
-    menuButton("") # 수령
-    menuButton("") # 수령창 나가기
-    menuButton("") # 카페 수익 현황 나기기
+    menuButton("ReceiveButton") 
+    menuButton("ExitUseNotX") 
+    menuButton("ExitUseNotX") 
+    # 선물창 들어가서 캐릭터 누르기
+    menuButton("Gifts") 
+    favorabilityIncrease() # 선물클릭, 위로 드래그, 캐릭터 찾아서 선택까지
     menuButton("Home")
+    # 끝
 
 # 2. 스케쥴
 def scheduleRoutine():
     menuButton("Schedule")
-    scheduleRecurrence() # 스케쥴 반복 함수
-    menuButton("RightArrow")
-    menuButton("RightArrow")
-    scheduleRecurrence() # 스케쥴 반복 함수
-    menuButton("RightArrow")
-    scheduleRecurrence() # 스케쥴 반복 함수
+    ###############################################
+    # 스케쥴 선택 미구현, 단순 초기값 반복
+    #############################################
+    menuButton("ScheduleTest")
+    menuButton("AllSchedule")
+    scheduleRecurrence() 
+    # 스케쥴 반복 함수
+    # 너무 귀찮으니까 일단 6개 대충 눌러버리는걸로~
     menuButton("Home")
+    # 끝
 
 # 3. 학생
 def studentRoutine():
@@ -56,8 +66,11 @@ def formationRoutine():
     NULL
 # 5. 서클
 def clanRoutine():
+    menuButton("Clan")
     menuButton("ExitUseX")
     menuButton("Home")
+    # 끝
+    
 # 6. 제조
 def craftingRoutine():
     NULL
@@ -73,21 +86,3 @@ def recruitRoutine():
 # 9. 임무
 def campaignRoutine():
     NULL
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    

@@ -20,7 +20,7 @@
         "ExitUseX": "Universal/exit_use_x.png",
         "ExitUseNotX": 0,
         "OkButton": "Universal/ok_button.png",
-        "receiveButton" : "Universal/receive_button.png",
+        "ReceiveButton" : "Universal/receive_button.png",
         
         "ZoomOut": "Universal/zoom_out.png",
         "ZoomIn": "Universal/zoom_in.png",
@@ -33,9 +33,12 @@
         "CafeEarnings": "Cafe/cafe_earnings.png",
         "Favorability": "Cafe/favorability.png",
         "InterestMe" : "Cafe/interest_me.png",
+        "Arrange" : "Cafe/Arrange.png",
         "Thanks" : "Cafe/thanks.png"
     },
     "scheduleImgPath": {
+        "AllSchedule" : "Schedule/all_schedule.png",
+        "ScheduleTest" : "Schedule/schedule_test.png",
         "LeftArrow": "Schedule/left_arrow.png",
         "RightArrow": "Schedule/right_arrow.png",
         "Facility": "Schedule/facility.png"
