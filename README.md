@@ -1,5 +1,9 @@
 # 메모장   
+<<<<<<< HEAD
 훈련소 때문에 급하게 만들어두는 프로젝트   
+=======
+훈련소땜에 대충 만들어두는 프로젝트   
+>>>>>>> 0e9218f7fc2652cf1486d57196c951309923bc4d
 git pull origin - merge o   
 git fetch origin - merge x
 
