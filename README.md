@@ -1,5 +1,5 @@
 # 메모장    
-훈련소땜에 대충 후딱후딱 만들어두는 프로젝트   
+훈련소땜에 대충 만들어두는 프로젝트   
 
 git pull origin - merge o   
 git fetch origin - merge x
