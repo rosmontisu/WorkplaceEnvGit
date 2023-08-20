@@ -36,7 +36,6 @@ adb shell input 커맨드 참조한 곳
    - h/w input - consider 
    - pyautogui - consider 
 
-
 ## 구현 아이디어
 1. 카페에서 애들 어떻게 찾을거임?   
    - 선물 선택 상태에서 말풍선 찾기
@@ -51,11 +50,15 @@ adb shell input 커맨드 참조한 곳
 
 3. gui환경은 뭐로?
    - window client - C# wpf
-   - web - electron
 
 4. 라이브러리
    - ppadb
    - openCV
    - pyautogui
    - PPOCR, easyOcr
+  
+## 고려중인거   
+- wpf환경 오픈소스인 vchat이랑 결합하는거 어떨까
+- 언어모델은 어차피 gpt-3 llm생각중이던거 있으니까 그거랑 결합하면 좋을듯
+- 서버는 centos8로 라즈베리파이 3b+에 돌리는게 좋을거 같음
 
