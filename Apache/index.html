@@ -1,0 +1,38 @@
+<body>
+    <input type="text" name="input1" value = "입력값1" id = "textInput1">
+    <input type="text" name="input2" value = "입력값2" id = "textInput2">
+    <input type="file" id="fileInput">
+    <button type="submit" id="sendButton">전송</button>
+ 
+    <script>
+        const textInput1 = document.querySelector('#textInput1');
+        const textInput2 = document.querySelector('#textInput2');
+        const fileInput = document.querySelector("#fileInput");
+        const sendButton = document.querySelector("#sendButton");
+ 
+        sendButton.addEventListener("click",async function(){
+ 
+            // form Data 객체 생성
+            const formData = new FormData();
+            
+
+            formData.append("input1", textInput1.value);
+            formData.append('input2', textInput2.value);
+            // 여러개의 파일을 선택한 경우가 아니라면 files[0] 
+            formData.append('fileInput', fileInput.files[0]);           
+            
+            // fetch를 사용해 서버로 데이터 전송
+            const res = await fetch('./getData.php', {
+
+                method: 'POST',                
+                body: formData
+                });
+            
+            const response = await res.json(); 
+
+			// 서버에 제대로 전달했는지 로그 찍어서 확인
+            console.log(response);            
+            
+        });
+    </script>
+</body>
