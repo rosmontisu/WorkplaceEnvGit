@@ -34,7 +34,18 @@ os.system(cmdCommand)
 
 # 이미지 탐색 후 좌표 추출
 # 이미지경로1, 이미지경로2, 찾을이미지, 현재스크린
-imageNum = myAdb.findCoordinate(pathImg, pathScreen, "cafe")
+print()
+print()
+print()
+print("탐색")
+imageNum = myAdb.findCoordinate(pathImg, pathScreen, "Universal/ok_button")
+print()
+print()
+print()
+print(imageNum)
+print()
+print()
+
 
 # 이미지 좌표 클릭
 myAdb.clickXY(deviceInfo, imageNum[0], imageNum[1])
