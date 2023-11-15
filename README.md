@@ -1,5 +1,5 @@
 # 메모장    
-훈련소땜에 만들어둔거
+훈련소땜에 만들어둔거   
 !!! 연동버젼 프라이빗으로 다시 만드는즁 !!!
 
 https://mkblog.co.kr/android-adb-input-command/
