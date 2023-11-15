@@ -1,10 +1,9 @@
 # 그냥 개인용 메모장이에요   
 8월 훈련소땜에 만들던 프로젝트 흔적입니다
-!!! 디코 연동버젼은 다시 만드는 중 !!!
+!!! 디코 연동버젼은 다시 만드는 중 !!!   
 
 https://mkblog.co.kr/android-adb-input-command/
-adb shell input 커맨드 참조한 곳
-
+adb shell input 커맨드 참조한 곳   
 
 ## 오토 작동 방식
 1. adb client device 객체 생성
@@ -13,6 +12,7 @@ adb shell input 커맨드 참조한 곳
    - win32api 로 핸들 가져오는 방식(후킹)
 3. cv/ocr로 스크린에서 탐색 후 좌표 추출
 4. 만들어둔 루틴 확인
+
 5. 루틴에 맞는 좌표로 adb를 통해 입력
    - adb touch 
    - android miniTouch 
