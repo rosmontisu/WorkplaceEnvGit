@@ -1,20 +1,22 @@
 # 메모장    
 훈련소땜에 만들어둔거
+!!! 연동버젼 프라이빗으로 다시 만드는즁 !!!
 
 https://mkblog.co.kr/android-adb-input-command/
 adb shell input 커맨드 참조한 곳
 
-## 현재 오토 코드 작동 방식
-1. adb client device의 정보를 가진 객체 adbdevice 생성
+## 오토 작동 방식
+1. adb client device 객체 생성
 2. 현재 에뮬레이터의 스크린을 캡쳐
    - adb shell screencap 방식
    - win32api 로 핸들 가져오는 방식(후킹)
-4. cv/ocr로 스크린에서 탐색 후 좌표 추출
-5. 해당 좌표로 adb를 통해 입력(클릭)
+3. cv/ocr로 스크린에서 탐색 후 좌표 추출
+4. 만들어둔 루틴 확인
+5. 루틴에 맞는 좌표로 adb를 통해 입력(클릭)
    - adb touch 
    - android miniTouch 
 
-## 위의 구현 아이디어
+## 기타 구현 아이디어
 1. 카페에서 애들 어떻게 찾을거임?   
    - 선물 선택 상태에서 말풍선 찾기
    - 처음 입장시 뜨는 방문 학생 목록으로 sd대조해서 찾기
