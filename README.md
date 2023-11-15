@@ -1,9 +1,9 @@
-# 메모장    
-훈련소땜에 만들어둔거   
-!!! 연동버젼 프라이빗으로 다시 만드는즁 !!!
+# 그냥 개인용 메모장이에요   
+8월 훈련소땜에 만들던 프로젝트 흔적입니다
+!!! 디코 연동버젼은 다시 만드는 중 !!!   
 
 https://mkblog.co.kr/android-adb-input-command/
-adb shell input 커맨드 참조한 곳
+adb shell input 커맨드 참조한 곳   
 
 ## 오토 작동 방식
 1. adb client device 객체 생성
@@ -12,7 +12,8 @@ adb shell input 커맨드 참조한 곳
    - win32api 로 핸들 가져오는 방식(후킹)
 3. cv/ocr로 스크린에서 탐색 후 좌표 추출
 4. 만들어둔 루틴 확인
-5. 루틴에 맞는 좌표로 adb를 통해 입력(클릭)
+
+5. 루틴에 맞는 좌표로 adb를 통해 입력
    - adb touch 
    - android miniTouch 
 
@@ -33,7 +34,7 @@ adb shell input 커맨드 참조한 곳
    - openCV
    - pyautogui
    - PPOCR, easyOcr
-  
+
 ## 고려중, 구현중 
 - wpf환경인 vpet과 결합 -> openai 키 발급받은거랑 vpet에 정상적으로 연결됨
 - 웹은 구글 centos7 클라우드로 돌리는 중. (전에 아파치로 열어두던거)

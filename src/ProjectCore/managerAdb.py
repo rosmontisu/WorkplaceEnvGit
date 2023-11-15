@@ -49,6 +49,7 @@ def captureAppScreen(adbdevice):
         
 def findCoordinate(pathImg, pathScreen, nameImg):
     img = pathImg + nameImg + ".png"
+    print("탐색 이미지 경로 : " + img)
     screen = pathScreen + "nowScreen.png"
     cor = pyautogui.locate(img, screen, confidence=0.9) # find image coordinate
 
